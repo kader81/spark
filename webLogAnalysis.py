@@ -1,7 +1,7 @@
 import sys
 import os
 
-log_file_path = 'dbfs:/' + os.path.join('databricks-datasets', 'cs100', 'lab2', 'data-001', 'apache.access.log.PROJECT')
+log_file_path = 'dbfs:/' + os.path.join('datasets', 'web', 'app', 'log-001', 'apache.access.log.PROJECT')
 base_df = sqlContext.read.text(log_file_path)
 base_df.printSchema()
 base_df.show(truncate=False)
